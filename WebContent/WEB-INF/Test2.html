@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="EUC-KR">
+	<title>DateTimePicker</title>
+	<link rel="stylesheet" type="text/css" href="/jquery.datetimepicker.css"/>
+	<script src="/jquery.js"></script>
+	<script src="/build/jquery.datetimepicker.full.min.js"></script>
+		<script type="text/javascript">
+		$('#input').datetimepicker();
+		$('button.somebutton').on('click', function () {
+		    $('#input').datetimepicker('show');
+		});
+		
+		jQuery('#datetimepicker5').datetimepicker({
+			 datepicker:false,
+			 allowTimes:[
+			  '12:00', '13:00', '15:00', 
+			  '17:00', '17:05', '17:20', '19:00', '20:00'
+			 ]
+			});
+		</script>
+	</head>
+	<body>
+		<input id="datetimepicker" type="text" >
+	</body>
+</html>

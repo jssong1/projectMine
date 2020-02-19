@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="EUC-KR"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ssm.mi.member.dao.VisitCounsel_RsvMapper">
+	<resultMap type="ssm.mi.member.vo.VisitCounsel_RsvVO" id="rsvVO">
+		<result property="vrNo" column="VRNO" />
+		<result property="ssNo" column="SSNO" />
+		<result property="ttNo" column="TTNO" />
+		<result property="vrStatus" column="VRSTATUS" />
+		<result property="vrTime" column="VRTIME"/>
+		<result property="vrDate" column="VRDATE" />
+		<result property="vrYN" column="VRYN"/>
+		<result property="vrInsertdate" column="VRINSERTDATE" />
+	</resultMap>
+	
+	<select id="vcRsvList" parameterType="ssm.mi.member.vo.VisitCounsel_RsvVO" resultMap="rsvVO">
+		SELECT TIME AS VRTIME
+		FROM VISIT_TIMETABLE
+	</select>
+</mapper>
+

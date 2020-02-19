@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="ssm.mi.member.dao.ReserveDao">
+
+
+	<select id="resSelectDate" parameterType="java.lang.String" resultType="reserveVO">
+		SELECT * FROM RES_DB WHERE RES_DATE = #{res_date}
+
+	</select>
+	
+	<select id="time_check" parameterType="reserveVO" resultType="int">
+		SELECT 
+			COUNT(*) 
+		FROM RES_DB 
+		WHERE 	RES_DATE=#{res_date} 
+		AND 	RES_TIME=#{res_time}
+	</select>
+</mapper>
